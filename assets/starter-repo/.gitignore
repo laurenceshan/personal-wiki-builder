@@ -1,0 +1,16 @@
+# Operating system and editor state
+.DS_Store
+Thumbs.db
+*.tmp
+*~
+
+# Obsidian local state
+.obsidian/workspace*
+.obsidian/cache
+.trash/
+
+# Never commit secrets
+.env
+.env.*
+*.pem
+*.key
