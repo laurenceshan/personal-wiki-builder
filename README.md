@@ -2,7 +2,7 @@
 
 Interview-first scaffolding for LLM-maintained personal wikis, inspired by [Karpathy's llm-wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
 
-Personal Wiki Builder turns the high-level llm-wiki idea into a confirmed design and a validated starter repository. It helps a user decide what the wiki should accumulate, how an agent may change it, and where privacy and publication boundaries should sit **before** creating the repository.
+Personal Wiki Builder turns the high-level llm-wiki idea into a confirmed design and a validated starter repository. It helps a user decide what the wiki should accumulate, how an agent may change it, and which boundaries must hold before content is created.
 
 This is an unofficial, agent-agnostic setup skill. It covers requirements discovery, blueprinting, scaffolding, and validation—not ongoing ingestion or wiki maintenance.
 
@@ -55,12 +55,30 @@ The generated schema turns the pattern's broad LLM-maintainer role into explicit
 
 | Feature | What it provides |
 |---|---|
-| **1. Two setup modes** | A staged Guided Interview for open-ended design and a Quick Start path with editable defaults. Interviews use the user's language; starter documentation and templates remain in English. |
+| **1. Two setup modes** | A staged Guided Interview for open-ended design and a Quick Start path with editable defaults. Interviews use the user's language; starter documentation and templates remain clear, simple, and reviewable. |
 | **2. Confirmed blueprint and canonical schema** | A user-confirmed `BLUEPRINT.md`, domain-specific configuration, and one canonical schema—`AGENTS.md` by default, with `CLAUDE.md` supported. |
 | **3. Judgment-centric knowledge model** | Ten templates covering core judgment pages, supporting source, concept, and entity pages, reviews, periodic synthesis, and manually reviewed public drafts. |
 | **4. Evidence and revision provenance** | Four-way epistemic separation, source traceability, counterevidence, applicability boundaries, judgment revision history, and decision reviews. |
-| **5. Governed workflows and privacy boundaries** | Tiered write permissions, contradiction handling, quick capture, themed ingestion, dual archival, private-by-default repositories, and sanitized public-export rules. |
-| **6. Deterministic delivery and acceptance** | Dependency-free scaffolding scripts, empty-target protection, domain generation, structural verification, small pilot recommendations, and an explicit maintenance handoff. |
+| **5. Governed workflows and privacy boundaries** | Tiered write permissions, contradiction handling, quick capture, themed ingestion, dual archival, private-by-default repositories, and sanitized public exports. |
+| **6. Deterministic delivery and acceptance** | Dependency-free scaffolding scripts, empty-target protection, domain generation, structural verification, small pilot recommendations, and an explicit validation step before use. |
+
+## Comparison Brief: LLM-Wiki Variants
+
+| Project | What it emphasizes | Main strengths | Best for |
+|---|---|---|---|
+| **Original Karpathy pattern** | Persistent, compounding wiki as a memory layer | Minimal, conceptually strong, durable knowledge accumulation, raw/wiki/schema separation, cross-linking | People learning the core idea and wanting to build their own custom workflow from the ground up |
+| **ScrapingArt / Karpathy-LLM-Wiki-Stack** | Practical implementation stack | Concrete build-out, tooling, Obsidian/Claude workflows, stronger operational guidance than the gist alone | Users who want a working setup quickly and prefer opinionated, build-ready examples |
+| **LLM Wiki v2** | Knowledge lifecycle and maintenance quality | Confidence, freshness, versioning, supersession and review discipline, extends the base pattern toward a more mature knowledge system | People who want their wiki to reason about obsolescence, trust, and revision over time |
+| **llmwiki.app** | Productized wiki experience | Easy onboarding, UI-first workflow, lower friction for non-technical users, quick adoption | Users who want an accessible wiki tool without custom scaffolding or deep setup work |
+| **Personal Wiki Builder** | Guided setup and safe governance | Interview-first design, confirmed blueprint, schema boundaries, judgments and evidence tracking, privacy-first defaults | People who want a personal wiki designed intentionally before content is created, with strong guardrails |
+
+### Short Recommendation
+
+- If you want the simplest and most influential conceptual model: choose the original Karpathy pattern.
+- If you want a concrete implementation to adapt quickly: choose ScrapingArt's stack.
+- If you want stronger knowledge lifecycle and trust management: choose LLM Wiki v2.
+- If you want a low-friction product rather than a custom system: choose llmwiki.app.
+- If you want a private, governed personal wiki built intentionally and safely: choose Personal Wiki Builder.
 
 ## Use with an Agent
 
@@ -135,13 +153,13 @@ This skill intentionally stops at setup and validation. It does not:
 - Publish private material or treat a public draft as published.
 - Introduce vector search, embeddings, websites, or complex automation by default.
 
-After handoff, use the generated canonical schema or a separate maintenance workflow. Begin with a small pilot and check source traceability, judgment history, confirmation gates, index and log updates, archival behavior, and export safety.
+After handoff, use the generated canonical schema or a separate maintenance workflow. Begin with a small pilot and check source traceability, judgment history, confirmation gates, index and log updates, and privacy boundaries.
 
 ## Attribution
 
 This project is an unofficial implementation inspired by Andrej Karpathy's [llm-wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). No endorsement is implied.
 
-The original pattern supplies the persistent wiki, raw-source layer, agent schema, ingest/query/lint operations, indexing, and logging. Personal Wiki Builder adds structured requirements discovery, blueprint confirmation, deterministic scaffolding, judgment and decision provenance, tiered write permissions, privacy-aware export boundaries, and pilot acceptance.
+The original pattern supplies the persistent wiki, raw-source layer, agent schema, ingest/query/lint operations, indexing, and logging. Personal Wiki Builder adds structured requirements discovery, blueprinting, validation, and explicit governance around how a future agent may change the personal wiki.
 
 ## License
 
